@@ -7,7 +7,7 @@
   Symbol
 */
 
-let x, y;
+//let x, y;
 
 let a = 7;
 let b = 3;

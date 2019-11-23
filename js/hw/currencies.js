@@ -6,25 +6,29 @@
 let amount = parseInt(prompt("Enter an amount"))
 let currency = prompt("Enter a currency")
 
-const EURO = {
-  title: "EUR",
-  rate: 0.9,
-};
-const HRIVNA = {
-  title: "UAH",
-  rate: 24.15,
-};
-const MANAT = {
-  title: "AZN",
-  rate: 1.7,
-};
+// API object
+let currencies = [
+  {
+    title: "EUR",
+    rate: 0.9,
+  },
+  {
+    title: "UAH",
+    rate: 24.15,
+  },
+  {
+    title: "AZN",
+    rate: 1.7,
+  },
+  {
+    title: "XXX",
+    rate: 1.2345,
+  },
+];
 
-if (currency == EURO.title ) {
-    alert(amount * EURO.rate)
-} else if (currency == HRIVNA.title) {
-    alert(amount * HRIVNA.rate)
-} else if (currency == MANAT.title) {
-    alert(amount * MANAT.rate)
-} else if (currency != "" ) {
-    alert("We do not have this currency")
-} 
+for (let key in currencies) {
+  if (currency == currencies[key].title) {
+    alert(amount * currencies[key].rate);
+    break;
+  }
+}
